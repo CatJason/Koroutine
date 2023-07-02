@@ -16,3 +16,14 @@ fun main() = runBlocking {
     job.join() // wait until child coroutine completes
     println("Done") 
 }
+
+/**
+ * launch 的返回值是一个 Job 接口的实现类
+ * Job 接口继承自 CoroutineContext.Element 接口
+ * CoroutineContext.Element 接口继承自 CoroutineContext 接口
+ *
+ * join() 依次执行
+ * 运行 block: suspend CoroutineScope.() -> Unit 函数
+ * 检查是否完成
+ * 未完成执行挂起函数
+ */

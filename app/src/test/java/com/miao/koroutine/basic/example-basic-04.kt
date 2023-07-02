@@ -25,3 +25,8 @@ suspend fun doWorld() = coroutineScope { // this: CoroutineScope
     }
     println("Hello")
 }
+
+/**
+ * 把 launch 看成 CoroutineScope 的 setBlock 函数，也就是 set 扩展函数
+ * 两者会同时开始执行，并且不会相互阻塞
+ */
