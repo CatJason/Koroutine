@@ -27,3 +27,11 @@ suspend fun player(name: String, table: Channel<Ball>) {
         table.send(ball) // send the ball back
     }
 }
+
+/**
+ * 在协程中，通道可以被认为是"公平"的
+ * 这意味着多个协程在竞争接收通道中的元素时，它们将按照先后顺序逐个获得元素
+ * 而不会出现某个协程一直占据通道而其他协程无法获取的情况
+ *
+ * ping，pong，ping，pong，ping，pong
+ */
