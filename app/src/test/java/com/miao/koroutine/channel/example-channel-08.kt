@@ -20,3 +20,9 @@ fun main() = runBlocking<Unit> {
     delay(1000)
     sender.cancel() // cancel sender coroutine
 }
+
+/**
+ * 容易理解
+ * Channel<Int>(4) 带缓冲的通道
+ * 当缓冲被占满的时候，协程就会被挂起
+ */
