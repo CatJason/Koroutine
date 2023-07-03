@@ -18,3 +18,8 @@ fun main() = runBlocking {
     for (y in channel) println(y)
     println("Done!")
 }
+
+/**
+ * 一个通道可以通过被关闭来表明没有更多的元素将会进入通道。
+ * 在接收者中可以定期的使用 for 循环来从通道中接收元素。
+ */
