@@ -26,3 +26,7 @@ suspend fun doSomethingUsefulTwo(): Int {
     delay(1000L) // pretend we are doing something useful here, too
     return 29
 }
+
+/**
+ * 协程 one 与协程 two 依次执行，执行时间相加
+ */
