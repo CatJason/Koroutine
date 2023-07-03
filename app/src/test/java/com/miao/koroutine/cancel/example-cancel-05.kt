@@ -23,3 +23,7 @@ fun main() = runBlocking {
     job.cancelAndJoin() // cancels the job and waits for its completion
     println("main: Now I can quit.")
 }
+
+/**
+ * 利用协程取消执行并不能自行取消的特性，使用 finally 做收尾工作，比如在 finally 中释放资源
+ */
