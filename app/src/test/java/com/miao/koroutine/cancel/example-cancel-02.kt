@@ -26,3 +26,7 @@ fun main() = runBlocking {
     job.cancelAndJoin() // cancels the job and waits for its completion
     println("main: Now I can quit.")
 }
+
+/**
+ * job.cancelAndJoin() 就是 job.cancel() job.join()
+ */
