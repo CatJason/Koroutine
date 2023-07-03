@@ -25,5 +25,11 @@ fun main() = runBlocking {
  * join() 依次执行
  * 运行 block: suspend CoroutineScope.() -> Unit 函数
  * 检查是否完成
- * 未完成执行挂起函数
+ * 未完成执行挂起函数，将线程挂起
+ *
+ * 所以 join() 函数是线程中检查子协程是否完成以决定是否挂起的函数
+ * join 有加入的意思，将一个 job 加入线程的子协程池
+ * job 在加入线程的子线程池后，会判断是否要阻塞线程
+ *
+ * 注意 join 函数并不是启动函数，launch 函数才是启动函数
  */
