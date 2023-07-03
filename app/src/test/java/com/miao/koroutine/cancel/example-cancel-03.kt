@@ -25,3 +25,7 @@ fun main() = runBlocking {
     job.cancelAndJoin() // cancels the job and waits for its completion
     println("main: Now I can quit.")
 }
+
+/**
+ * 协程被取消后，还是会继续执行，抛出 kotlinx.coroutines.JobCancellationException 异常
+ */
