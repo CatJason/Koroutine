@@ -26,3 +26,8 @@ fun main() = runBlocking {
     job.cancelAndJoin() // cancels the job and waits for its completion
     println("main: Now I can quit.")
 }
+
+/**
+ * 使用 isActive ，在取消请求发生时及时退出或中断协程的执行。
+ * 这样可以确保及时释放资源并响应取消请求。
+ */
