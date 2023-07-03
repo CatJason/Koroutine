@@ -34,3 +34,7 @@ fun main() {
     // Outside of runBlocking all coroutines have completed
     println(acquired) // Print the number of resources still acquired
 }
+
+/**
+ * finally 一定会执行，怎么改时间，acquired 一定是 0
+ */
