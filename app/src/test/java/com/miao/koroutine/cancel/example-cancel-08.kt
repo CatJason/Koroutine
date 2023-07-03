@@ -17,3 +17,8 @@ fun main() = runBlocking {
     }
     println("Result is $result")
 }
+
+/**
+ * withTimeoutOrNull 不再抛出异常了，返回一个 null
+ * 实际上就是帮你实现了try {...} catch (e: TimeoutCancellationException) {... return null}
+ */

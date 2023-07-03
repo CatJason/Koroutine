@@ -15,3 +15,9 @@ fun main() = runBlocking {
         }
     }
 }
+
+/**
+ * withTimeout(time)
+ * 到时间后会抛出 kotlinx.coroutines.TimeoutCancellationException 异常
+ * 需要包裹在 try {...} catch (e: TimeoutCancellationException) {...} 中使用
+ */
