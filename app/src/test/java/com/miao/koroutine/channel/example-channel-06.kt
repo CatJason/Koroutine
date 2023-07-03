@@ -28,3 +28,8 @@ fun CoroutineScope.launchProcessor(id: Int, channel: ReceiveChannel<Int>) = laun
         println("Processor #$id received $msg")
     }    
 }
+
+/**
+ * 就是一个生产者，五个并发的消费者
+ * 就叫扇出
+ */

@@ -24,3 +24,11 @@ suspend fun sendString(channel: SendChannel<String>, s: String, time: Long) {
         channel.send(s)
     }
 }
+
+/**
+ * 多个生产者，一个消费者就叫扇入
+ */
+
+/**
+ * Channel<E>：SendChannel<E>, ReceiveChannel<E>
+ */
