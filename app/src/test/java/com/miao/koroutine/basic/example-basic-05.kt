@@ -21,6 +21,9 @@ fun main() = runBlocking {
  * launch 的返回值是一个 Job 接口的实现类
  * Job 接口继承自 CoroutineContext.Element 接口
  * CoroutineContext.Element 接口继承自 CoroutineContext 接口
+ * 协程中的大部分操作都是向 CoroutineScope 中增加扩展函数实现的
+ * 意识到 Job 就是 CoroutineScope 对我们很重要
+ * 拿到了 CoroutineScope 我们就能对协程进行任意操作
  *
  * join() 依次执行
  * 运行 block: suspend CoroutineScope.() -> Unit 函数
