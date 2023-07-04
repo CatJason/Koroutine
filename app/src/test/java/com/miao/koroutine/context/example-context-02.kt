@@ -19,3 +19,14 @@ fun main() = runBlocking<Unit> {
         println("main runBlocking: After delay in thread ${Thread.currentThread().name}")
     }
 }
+
+/**
+ * 当使用 Dispatchers.Unconfined 调度器时
+ * 协程会立即在调用者的线程中开始执行
+ * 直到遇到第一个挂起点
+ * 然后，协程的执行将会在恢复它的挂起点的线程上继续，这可能是不同的线程
+ *
+ * 这种特性使得 Dispatchers.Unconfined 在某些特定情况下非常有用。
+ * 例如，当需要在某个具体的上下文中执行一段协程代码时
+ * 但又不想受限于特定的线程池或调度器时，可以使用 Dispatchers.Unconfined。
+ */
