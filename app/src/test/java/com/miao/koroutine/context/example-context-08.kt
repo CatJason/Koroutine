@@ -24,3 +24,6 @@ fun main() = runBlocking(CoroutineName("main")) {
     }
     log("The answer for v1 / v2 = ${v1.await() / v2.await()}")
 }
+/**
+ * 给协程命名用以调试
+ */
