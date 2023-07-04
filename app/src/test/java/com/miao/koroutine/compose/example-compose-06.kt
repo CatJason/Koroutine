@@ -30,3 +30,7 @@ suspend fun failedConcurrentSum(): Int = coroutineScope {
     }
     one.await() + two.await()
 }
+
+/**
+ *  实际试一下
+ */
