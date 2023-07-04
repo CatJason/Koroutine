@@ -21,3 +21,13 @@ fun main() = runBlocking<Unit> {
     request.join() // wait for completion of the request, including all its children
     println("Now processing of the request is complete")
 }
+
+/**
+ * 知识点
+ * 父协程会首先执行
+ * 父协程执行完成后会按先后顺序执行子协程，不要使用 join() 函数，将父协程的执行逻辑加在子协程逻辑之后
+ */
+
+/**
+ * 代码中的 request.join() 是将主线程的执行逻辑加在父协程逻辑之后
+ */
