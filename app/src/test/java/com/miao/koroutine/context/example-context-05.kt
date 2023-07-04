@@ -10,3 +10,7 @@ import kotlinx.coroutines.*
 fun main() = runBlocking<Unit> {
     println("My job is ${coroutineContext[Job]}")
 }
+
+/**
+ * 打印了当前协程的 Job 对象，即当前协程的任务。这样可以看到当前协程的 Job 对象的信息，比如它的唯一标识符等。
+ */
