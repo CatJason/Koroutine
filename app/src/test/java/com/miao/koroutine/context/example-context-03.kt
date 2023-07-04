@@ -20,3 +20,7 @@ fun main() = runBlocking<Unit> {
     }
     log("The answer is ${a.await() * b.await()}")
 }
+
+/**
+ * 打印日志，调试协程
+ */
