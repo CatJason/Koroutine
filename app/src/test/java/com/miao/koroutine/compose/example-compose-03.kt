@@ -29,3 +29,10 @@ suspend fun doSomethingUsefulTwo(): Int {
     delay(1000L) // pretend we are doing something useful here, too
     return 29
 }
+
+/**
+ * 如果把 async 的
+ * @param start: CoroutineStart
+ * 设置成 CoroutineStart.LAZY，那么我们想实现 async 的功能，必须在 await() 调用前去主动 start()
+ * 否则它就只能顺序执行
+ */
