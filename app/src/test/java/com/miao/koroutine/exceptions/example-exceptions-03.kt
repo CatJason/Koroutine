@@ -25,3 +25,13 @@ fun main() = runBlocking {
     }
     job.join()
 }
+
+/**
+ * 当一个协程使用 Job.cancel() 取消的时候，它会被终止，但是它不会取消它的父协程。
+ */
+
+/**
+ * yield() 函数通常不需要显式地调用
+ * 因为协程的挂起函数（如 delay()、suspendCancellableCoroutine() 等）已经内置了适当的挂起点，会自动让出执行权。
+ * yield() 主要在编写自定义的协程构建器或调度器时使用，以实现更精细的控制和调度策略。
+ */
