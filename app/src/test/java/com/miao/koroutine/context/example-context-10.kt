@@ -34,3 +34,9 @@ fun main() = runBlocking<Unit> {
     activity.destroy() // cancels all coroutines
     delay(1000) // visually confirm that they don't work
 }
+
+/**
+ * 我们通过创建一个 CoroutineScope 实例来管理协程的生命周期，并使它与 activity 的生命周期相关联。
+ * CoroutineScope 可以通过 CoroutineScope() 创建或者通过MainScope() 工厂函数。
+ * 前者创建了一个通用作用域，而后者为使用 Dispatchers.Main 作为默认调度器的 UI 应用程序 创建作用域
+ */
