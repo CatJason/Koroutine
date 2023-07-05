@@ -14,3 +14,7 @@ fun main() = runBlocking<Unit> {
     nums.zip(strs) { a, b -> "$a -> $b" } // compose a single string
         .collect { println(it) } // collect and print
 }
+
+/**
+ * 流拥有一个 zip 操作符用于组合两个流中的相关值
+ */
