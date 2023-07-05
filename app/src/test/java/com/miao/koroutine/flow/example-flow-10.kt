@@ -23,4 +23,8 @@ fun main() = runBlocking<Unit> {
     numbers() 
         .take(2) // take only the first two
         .collect { value -> println(value) }
-}            
+}
+
+/**
+ * take 限定协程执行挂起次数
+ */
