@@ -37,3 +37,5 @@ fun main() = runBlocking<Unit> {
  * 收集到元素2，打印"Collect string 2"。
  * 收集到元素4，打印"Collect string 4"
  */
+
+
