@@ -27,3 +27,8 @@ fun main() = runBlocking<Unit> {
     }   
     println("Collected in $time ms")
 }
+
+/**
+ * 当收集器处理它们太慢的时候， conflate 操作符可以用于跳过中间值。
+ * 但是总的时间并没有减少
+ */
