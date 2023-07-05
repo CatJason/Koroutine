@@ -12,3 +12,8 @@ fun main() = runBlocking<Unit> {
     // Convert an integer range to a flow
     (1..3).asFlow().collect { value -> println(value) }
 }
+
+/**
+ * flowOf 构建器定义了一个发射固定值集的流。
+ * 使用 .asFlow() 扩展函数，可以将各种集合与序列转换为流。
+ */
