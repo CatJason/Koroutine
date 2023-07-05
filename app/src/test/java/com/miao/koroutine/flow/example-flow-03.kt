@@ -15,3 +15,7 @@ suspend fun simple(): List<Int> {
 fun main() = runBlocking<Unit> {
     simple().forEach { value -> println(value) } 
 }
+
+/**
+ * 使用挂起函数，延迟返回一个列表进行遍历
+ */
