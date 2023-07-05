@@ -24,6 +24,12 @@ fun main() = runBlocking<Unit> {
                 delay(300) // pretend we are processing it for 300 ms
                 println("Done $value") 
             } 
-    }   
+    }
     println("Collected in $time ms")
 }
+
+/**
+ * collectLatest 的函数体需要花费 300 毫秒
+ * 但是新值每 100 秒发射一次，我们看到该代码块对每个值运行，但是只收集最后一个值
+ * 加上反射三个值用了 300ms，一共 600+ms，总的时间减少了
+ */
