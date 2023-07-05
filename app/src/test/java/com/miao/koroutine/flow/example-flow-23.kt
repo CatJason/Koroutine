@@ -23,3 +23,8 @@ fun main() = runBlocking<Unit> {
             println("$value at ${currentTimeMillis() - startTime} ms from start") 
         } 
 }
+
+/**
+ * 当一个流里包含了一个流，它就变得很难以理解，我们希望把这个嵌套的流结构给展平
+ * Flow<Flow<String>>
+ */
