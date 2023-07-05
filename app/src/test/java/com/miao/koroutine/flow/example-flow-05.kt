@@ -24,3 +24,6 @@ fun main() = runBlocking<Unit> {
     println("Calling collect again...")
     flow.collect { value -> println(value) } 
 }
+/**
+ * Flow 是一种类似于序列的冷流 — 这段 flow 构建器中的代码直到流被收集的时候才运行。
+ */
