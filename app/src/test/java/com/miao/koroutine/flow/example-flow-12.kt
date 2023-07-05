@@ -14,10 +14,26 @@ fun main() = runBlocking<Unit> {
             println("Filter $it")
             it % 2 == 0              
         }              
-        .map { 
+        .map {
             println("Map $it")
             "string $it"
         }.collect { 
             println("Collect $it")
         }    
 }
+
+/**
+ * 流是连续的
+ */
+
+/**
+ * Fow发射1，被过滤掉。
+ * Flow发射2，满足条件，打印"Filter 2"。
+ * Flow发射3，被过滤掉。
+ * Flow发射4，满足条件，打印"Filter 4"。
+ * Flow发射5，被过滤掉。
+ * Flow发射2，应用映射操作，打印"Map 2"。
+ * Flow发射4，应用映射操作，打印"Map 4"。
+ * 收集到元素2，打印"Collect string 2"。
+ * 收集到元素4，打印"Collect string 4"
+ */
