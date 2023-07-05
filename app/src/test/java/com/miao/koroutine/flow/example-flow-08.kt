@@ -18,3 +18,7 @@ fun main() = runBlocking<Unit> {
         .map { request -> performRequest(request) }
         .collect { response -> println(response) }
 }
+
+/**
+ * 基础的操作符拥有相似的名字，比如 map 与 filter。 流与序列的主要区别在于这些操作符中的代码可以调用挂起函数。
+ */
