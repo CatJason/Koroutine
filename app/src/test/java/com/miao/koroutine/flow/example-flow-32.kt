@@ -14,4 +14,9 @@ fun main() = runBlocking<Unit> {
     simple()
         .onCompletion { println("Done") }
         .collect { value -> println(value) }
-}            
+}
+
+/**
+ * 这个例子是为了表达
+ * 当 Flow 的收集结束时，无论是正常完成还是发生异常，都会触发 onCompletion 操作符中的回调。
+ */
