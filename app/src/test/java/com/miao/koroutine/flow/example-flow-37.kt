@@ -21,3 +21,11 @@ fun main() = runBlocking<Unit> {
         println(value)
     } 
 }
+
+/**
+ * 为方便起见，流构建器对每个发射值执行附加的 ensureActive 检测以进行取消。
+ * 这意味着从 flow { ... } 发出的繁忙循环是可以取消的
+ * 比如可以使用 cancel 函数来取消
+ *
+ * 尝试发出 4 之后抛出 CancellationException
+ */
