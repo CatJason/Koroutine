@@ -16,4 +16,8 @@ fun main() = runBlocking<Unit> {
         .onEach { event -> println("Event: $event") }
         .launchIn(this) // <--- Launching the flow in a separate coroutine
     println("Done")
-}            
+}
+
+/**
+ * 使用 launchIn 替换 collect 我们可以在单独的协程中启动流的收集，这样就可以立即继续进一步执行代码
+ */
