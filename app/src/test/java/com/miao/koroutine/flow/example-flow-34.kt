@@ -18,3 +18,7 @@ fun main() = runBlocking<Unit> {
             println(value) 
         }
 }
+
+/**
+ * 与 catch 操作符的另一个不同点是 onCompletion 能观察到所有异常并且仅在上游流成功完成（没有取消或失败）的情况下接收一个 null 异常
+ */
