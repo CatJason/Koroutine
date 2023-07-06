@@ -23,3 +23,14 @@ fun main() = runBlocking<Unit> {
             println("$value at ${currentTimeMillis() - startTime} ms from start") 
         } 
 }
+
+/**
+ * flatMapLatest操作符的行为类似于flatMapMerge，但有一个重要的区别。
+ * flatMapLatest只关注源流的最新元素，忽略之前的元素。
+ */
+
+/**
+ * 与flatMapMerge和flatMapConcat不同，flatMapLatest不会等待前一个内部流完成。
+ * 它会立即切换到最新的内部流，并在处理完成后将其结果合并到输出流中。
+ * 这可以提高响应性，并且对于处理频繁变化的数据流非常有用。
+ */
