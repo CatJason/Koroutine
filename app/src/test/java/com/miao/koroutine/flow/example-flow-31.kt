@@ -16,4 +16,9 @@ fun main() = runBlocking<Unit> {
     } finally {
         println("Done")
     }
-}            
+}
+
+/**
+ * 命令式 finally 块
+ * 除了 try/catch 之外，收集器还能使用 finally 块在 collect 完成时执行一个动作
+ */
