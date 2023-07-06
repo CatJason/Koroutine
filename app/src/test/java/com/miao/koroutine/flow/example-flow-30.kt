@@ -23,4 +23,9 @@ fun main() = runBlocking<Unit> {
         }
         .catch { e -> println("Caught $e") }
         .collect()
-}            
+}
+
+/**
+ * 声明式捕获
+ * 将 collect 操作符的代码块移动到 onEach 中，并将其放到 catch 操作符之前。
+ */
