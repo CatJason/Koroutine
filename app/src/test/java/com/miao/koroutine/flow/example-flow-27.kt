@@ -26,4 +26,10 @@ fun main() = runBlocking<Unit> {
     } catch (e: Throwable) {
         println("Caught $e")
     } 
-}            
+}
+
+/**
+ * 让我们更改一下，在 Flow 的末端操作符函数中使用 check
+ * 在 try {...} catch {...} 中使用 collect
+ * 我们发现异常依然能被捕获
+ */
